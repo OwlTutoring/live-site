@@ -819,7 +819,7 @@ const SubjectTypesStore = {
 
 
 // Create a Stripe client.
-var stripe = Stripe("pk_test_gheuGNTfHiHL1ULiFHNPxlzm");
+var stripe = Stripe("pk_live_ewXOSu5rmNjJR9lMA13bLDsy");
 
 // Create an instance of Elements.
 var elements = stripe.elements();
@@ -1538,6 +1538,17 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 
 /***/ }),
 
+/***/ "C9hK":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"grid-margin-container"},[_c('div',{attrs:{"id":"pay"}},[_c('div',{staticClass:"nav-grid"},[_c('router-link',{staticClass:"nav-link nav-item",attrs:{"to":"pay"}},[_vm._v("Pay")]),_vm._v(" "),_c('router-link',{staticClass:"nav-link nav-item",attrs:{"to":"chargeHistory"}},[_vm._v("History")]),_vm._v(" "),_c('h2',[_vm._v("Balance: "+_vm._s("$" + _vm.AccountStore.account.balance/100))])],1),_vm._v(" "),_c('div',{attrs:{"id":"pay-row-one"}},[_c('div',{attrs:{"id":"lesson-input-container"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.numLessons),expression:"numLessons"}],attrs:{"placehoder":"#","type":"number","id":"num-lessons"},domProps:{"value":(_vm.numLessons)},on:{"input":function($event){if($event.target.composing){ return; }_vm.numLessons=$event.target.value}}}),_vm._v(" "),(_vm.numLessons > 1)?_c('div',{attrs:{"id":"lesson-word"}},[_vm._v("Lessons")]):_c('div',{attrs:{"id":"lesson-word"}},[_vm._v("Lesson")])]),_vm._v(" "),(_vm.value != _vm.cost)?_c('div',{attrs:{"id":"center-message"}},[_c('div',{staticClass:"value"},[_vm._v(_vm._s("$" + _vm.value/100))]),_vm._v(" 10% off\n      ")]):_c('div',{attrs:{"id":"center-message"}},[_vm._v("buy 5 or more lessons and get 10% off")]),_vm._v(" "),_c('div',{attrs:{"id":"cost"}},[_vm._v(_vm._s("$" + _vm.cost/100))])]),_vm._v(" "),(_vm.sources.data.length > 0)?_c('div',[_vm._v("Pay with")]):_vm._e(),_vm._v(" "),_vm._l((_vm.sources.data),function(source,i){return _c('div',{key:source.ID,staticClass:"saved-source"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.selectedSource),expression:"selectedSource"}],attrs:{"id":'source-' + i,"type":"radio"},domProps:{"value":source,"checked":_vm._q(_vm.selectedSource,source)},on:{"change":function($event){_vm.selectedSource=source}}}),_vm._v(" "),_c('label',{staticClass:"source-label",attrs:{"for":'source-' + i}},[_vm._v(_vm._s(source.card.brand)+" **** **** **** "+_vm._s(source.card.last4)+" Exp. "+_vm._s(source.card.exp_month)+"/"+_vm._s(source.card.exp_year))]),_vm._v(" "),_c('button',{staticClass:"plain-button delete-button",on:{"click":function($event){_vm.deleteCard(source.id)}}},[_vm._v("Delete Card")])])}),_vm._v(" "),(_vm.sources.data.length > 0)?_c('div',[_vm._v("or add new card")]):_vm._e(),_vm._v(" "),_c('div',{attrs:{"id":"new-card"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.selectedSource),expression:"selectedSource"}],attrs:{"id":"new","type":"radio","value":"new"},domProps:{"checked":_vm._q(_vm.selectedSource,"new")},on:{"change":function($event){_vm.selectedSource="new"}}}),_vm._v(" "),_c('div',{attrs:{"id":"card-element"},on:{"click":_vm.changeToNewSource}}),_vm._v(" "),_c('div',{attrs:{"id":"card-errors","role":"alert"}}),_vm._v(" "),_c('div',{attrs:{"id":"save-card-container"}},[_vm._v("\n        Save Card "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.saveCard),expression:"saveCard"}],staticClass:"form-field",attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(_vm.saveCard)?_vm._i(_vm.saveCard,null)>-1:(_vm.saveCard)},on:{"change":function($event){var $$a=_vm.saveCard,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.saveCard=$$a.concat([$$v]))}else{$$i>-1&&(_vm.saveCard=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.saveCard=$$c}}}})])]),_vm._v(" "),_c('button',{staticClass:"color-button",on:{"click":function($event){_vm.showConfirmation()}}},[_vm._v("Continue to Confirmation")]),_vm._v(" "),(_vm.viewConfirmation)?_c('div',{attrs:{"id":"confirm-back"}},[_c('div',{attrs:{"id":"confirm-window"}},[_c('h2',[_vm._v("\n        "+_vm._s(_vm.lessonString)),_c('br'),_vm._v("\n        $"+_vm._s(_vm.cost/100)),_c('br'),_vm._v("\n        "+_vm._s(_vm.sourceToConfirm.card.brand)+" "+_vm._s(_vm.sourceToConfirm.card.last4)+" "+_vm._s(_vm.sourceToConfirm.card.exp_month)+"/"+_vm._s(_vm.sourceToConfirm.card.exp_year.toString().substring(2,4))),_c('br')]),_vm._v(" "),_c('button',{staticClass:"color-button",on:{"click":function($event){_vm.submitPayment()}}},[_vm._v("Confirm")]),_c('button',{staticClass:"light-button",on:{"click":function($event){_vm.hideConfirmation()}}},[_vm._v("Go Back")])])]):_vm._e()],2),_vm._v(" "),_c('div',{staticClass:"after-margin"})])}
+var staticRenderFns = []
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+
+/***/ }),
+
 /***/ "CgJV":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1780,17 +1791,6 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ "GJFm":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"grid-margin-container"},[_c('div',{attrs:{"id":"pay"}},[_c('div',{staticClass:"nav-grid"},[_c('router-link',{staticClass:"nav-link nav-item",attrs:{"to":"pay"}},[_vm._v("Pay")]),_vm._v(" "),_c('router-link',{staticClass:"nav-link nav-item",attrs:{"to":"chargeHistory"}},[_vm._v("History")]),_vm._v(" "),_c('h2',[_vm._v("Balance: "+_vm._s("$" + _vm.AccountStore.account.balance/100))])],1),_vm._v(" "),_c('div',{attrs:{"id":"pay-row-one"}},[_c('div',{attrs:{"id":"lesson-input-container"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.numLessons),expression:"numLessons"}],attrs:{"placehoder":"#","type":"number","id":"num-lessons"},domProps:{"value":(_vm.numLessons)},on:{"input":function($event){if($event.target.composing){ return; }_vm.numLessons=$event.target.value}}}),_vm._v(" "),(_vm.numLessons > 1)?_c('div',{attrs:{"id":"lesson-word"}},[_vm._v("Lessons")]):_c('div',{attrs:{"id":"lesson-word"}},[_vm._v("Lesson")])]),_vm._v(" "),(_vm.value != _vm.cost)?_c('div',{attrs:{"id":"center-message"}},[_c('div',{staticClass:"value"},[_vm._v(_vm._s("$" + _vm.value/100))]),_vm._v(" 10% off\n      ")]):_c('div',{attrs:{"id":"center-message"}},[_vm._v("buy 5 or more lessons and get 10% off")]),_vm._v(" "),_c('div',{attrs:{"id":"cost"}},[_vm._v(_vm._s("$" + _vm.cost/100))])]),_vm._v(" "),(_vm.sources.data.length > 0)?_c('div',[_vm._v("Pay with")]):_vm._e(),_vm._v(" "),_vm._l((_vm.sources.data),function(source,i){return _c('div',{key:source.ID,staticClass:"saved-source"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.selectedSource),expression:"selectedSource"}],attrs:{"id":'source-' + i,"type":"radio"},domProps:{"value":source,"checked":_vm._q(_vm.selectedSource,source)},on:{"change":function($event){_vm.selectedSource=source}}}),_vm._v(" "),_c('label',{staticClass:"source-label",attrs:{"for":'source-' + i}},[_vm._v(_vm._s(source.card.brand)+" **** **** **** "+_vm._s(source.card.last4)+" Exp. "+_vm._s(source.card.exp_month)+"/"+_vm._s(source.card.exp_year))]),_vm._v(" "),_c('button',{staticClass:"plain-button delete-button",on:{"click":function($event){_vm.deleteCard(source.id)}}},[_vm._v("Delete Card")])])}),_vm._v(" "),(_vm.sources.data.length > 0)?_c('div',[_vm._v("or add new card")]):_vm._e(),_vm._v(" "),_c('div',{attrs:{"id":"new-card"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.selectedSource),expression:"selectedSource"}],attrs:{"id":"new","type":"radio","value":"new"},domProps:{"checked":_vm._q(_vm.selectedSource,"new")},on:{"change":function($event){_vm.selectedSource="new"}}}),_vm._v(" "),_c('div',{attrs:{"id":"card-element"},on:{"click":_vm.changeToNewSource}}),_vm._v(" "),_c('div',{attrs:{"id":"card-errors","role":"alert"}}),_vm._v(" "),_c('div',{attrs:{"id":"save-card-container"}},[_vm._v("\n        Save Card "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.saveCard),expression:"saveCard"}],staticClass:"form-field",attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(_vm.saveCard)?_vm._i(_vm.saveCard,null)>-1:(_vm.saveCard)},on:{"change":function($event){var $$a=_vm.saveCard,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.saveCard=$$a.concat([$$v]))}else{$$i>-1&&(_vm.saveCard=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.saveCard=$$c}}}})])]),_vm._v(" "),_c('button',{staticClass:"color-button",on:{"click":function($event){_vm.showConfirmation()}}},[_vm._v("Continue to Confirmation")]),_vm._v(" "),(_vm.viewConfirmation)?_c('div',{attrs:{"id":"confirm-back"}},[_c('div',{attrs:{"id":"confirm-window"}},[_c('h2',[_vm._v("\n        "+_vm._s(_vm.lessonString)),_c('br'),_vm._v("\n        $"+_vm._s(_vm.cost/100)),_c('br'),_vm._v("\n        "+_vm._s(_vm.sourceToConfirm.card.brand)+" "+_vm._s(_vm.sourceToConfirm.card.last4)+" "+_vm._s(_vm.sourceToConfirm.card.exp_month)+"/"+_vm._s(_vm.sourceToConfirm.card.exp_year.toString().substring(2,4))),_c('br')]),_vm._v(" "),_c('button',{staticClass:"color-button",on:{"click":function($event){_vm.submitPayment()}}},[_vm._v("Confirm")]),_c('button',{staticClass:"light-button",on:{"click":function($event){_vm.hideConfirmation()}}},[_vm._v("Go Back")])])]):_vm._e()],2),_vm._v(" "),_c('div',{staticClass:"after-margin"})])}
-var staticRenderFns = []
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
-
-/***/ }),
-
 /***/ "JcqX":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1853,9 +1853,9 @@ var Component = normalizeComponent(
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Pay_vue__ = __webpack_require__("3zb0");
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_212f701e_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Pay_vue__ = __webpack_require__("GJFm");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_79bfcf10_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Pay_vue__ = __webpack_require__("C9hK");
 function injectStyle (ssrContext) {
-  __webpack_require__("ijfL")
+  __webpack_require__("NvZ0")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -1873,7 +1873,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Pay_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_212f701e_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Pay_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_79bfcf10_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Pay_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -2086,6 +2086,13 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /***/ }),
 
 /***/ "NpN7":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "NvZ0":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -3351,13 +3358,6 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 
 /***/ }),
 
-/***/ "ijfL":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "jUw9":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4138,4 +4138,4 @@ var Component = normalizeComponent(
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.4de43d9eaa4c405a8364.js.map
+//# sourceMappingURL=app.586655281f5f196528f2.js.map
